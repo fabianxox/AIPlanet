@@ -133,7 +133,7 @@ def math_explanation_agent(state: AgentState):
 
 def feedback_agent(state: AgentState):
     # kept for graph compatibility (not used by FastAPI endpoints)
-    print("\n🤖 MathBot's answer:\n-----------------\n", state["response"])
+    print("\n MathBot's answer:\n-----------------\n", state["response"])
     feedback = input("\n Was this helpful? (yes or correction): ")
     return {"feedback": feedback}
 
@@ -390,3 +390,4 @@ def final_answer(request: FinalRequest):
     sessions.pop(request.session_id, None)
 
     return {"final_answer": final_response}
+
